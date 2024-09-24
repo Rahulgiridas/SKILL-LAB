@@ -1,0 +1,18 @@
+def nbase(num,n):
+    remi=[]
+    while num!=0:
+        rem=num%n
+        remi.append(rem)
+        num=num//n
+    result=''
+    for i in remi:
+        if i>9:
+            c=chr(i+55)
+            result=result+c
+        else:
+            c=str(i)
+            result=result+c
+    return result[::-1]
+OUTPUT:
+nbase(908,13)
+54B
