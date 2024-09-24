@@ -1,0 +1,13 @@
+def ded(arr,num,deff):
+    count=0
+    for i in arr:
+        if i-num<=deff:
+            count=count+1
+    if count==0:
+        return -1
+    else:
+        return count
+
+INPUT:
+ded([91,57,38,21,10],9,32)
+O/P:3
