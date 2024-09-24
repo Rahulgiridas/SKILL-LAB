@@ -1,0 +1,10 @@
+def len(arr):
+    n=len(arr)
+    e=arr[0:n:2]
+    o=arr[1:n:2]
+    e.sort(reverse=True)
+    o.sort()
+    return e[1]+o[1]
+
+INPUT:
+len([4,1,3,6,2,11,5,5])
