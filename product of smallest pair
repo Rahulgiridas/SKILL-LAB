@@ -1,0 +1,11 @@
+def smallpair(arr,sum):
+    n=len(arr)
+    if n<2:
+        return -1
+    arr sort()
+    if arr[0]+arr[1]<=sum:
+        return arr[0]*arr[1]
+    else:
+        return 0
+INPUT:    
+smallpair([4,1,3,7,8],6)
