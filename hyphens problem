@@ -1,0 +1,12 @@
+def hyphens(s):
+    alph = ''
+    hyp = ''
+    for i in s:
+        if i == '-':
+            hyp = hyp+i
+        else:
+            alph = alph+i 
+    return hyp+alph
+  
+hyphens('hello-hi-sir)
+hello-hi-sir  
