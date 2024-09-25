@@ -1,0 +1,5 @@
+def strStr(haystack,needle):
+        return haystack.find(needle)
+INPUT:haystack="HelloPremHellogokul"
+needle='gokul'
+strStr(haystack,needle)
