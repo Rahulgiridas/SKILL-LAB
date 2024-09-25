@@ -1,0 +1,15 @@
+def tax(s):
+    if s<0:
+        return -1
+    elif s>0 and s<=5000:
+        return "No tax"
+    elif s>5000 and s<=10000:
+        return s - (s*0.05 + 10)
+    elif s>10000 and s<=50000:
+        return s - (s*0.1 + 100)
+    elif s>50000 and s<=100000:
+        return s - (s*0.15 + 150)
+    elif s>100000 and s<=500000:
+        return s - (s*0.2 + 200)
+    elif s>500000:
+        return "salary limit exceeded"
