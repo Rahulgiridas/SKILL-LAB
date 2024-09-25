@@ -1,0 +1,28 @@
+def atoi(s):
+    s=s.strip()
+    sign=1 
+    if len(s)==0:
+        return 0
+    if s[0]=='-':
+        sign=-1
+        s=s[1:]
+    elif s[0]=='+':
+        s=s[1:]
+    result =0
+    for i in s:
+        if i.isdigit():
+            digit=int(i)
+            result = result*10+digit 
+        else:
+            break
+    result = result*sign
+    mini=-2**31
+    maxi=2**31-1
+    if result>maxi:
+        return maxi
+    if result<mini:
+        return mini
+    else:
+        return result
+
+       INPUT:atoi("   2467846vhgjhgcn     ") 
