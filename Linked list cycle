@@ -1,0 +1,11 @@
+class Solution(object):
+    def hasCycle(self, head):
+        t = head
+        r = head
+        while r and r.next:
+            t = t.next
+            r = r.next.next
+            if r==t:
+                return True
+        return False
+
