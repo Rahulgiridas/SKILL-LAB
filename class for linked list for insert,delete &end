@@ -1,0 +1,46 @@
+class Node:
+    def _init_(self, data):
+        self.data = data
+        self.next = None
+
+class LinkedList:
+    def _init_(self):
+        self.head = None
+
+    def insertAtBegin(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        else:
+            new_node.next = self.head
+            self.head = new_node
+
+    def insertAtEnd(self, data):
+        new_node = Node(data)
+        if self.head is None:  
+            self.head = new_node
+            return
+        last = self.head
+        while last.next:
+            last = last.next
+        last.next = new_node
+
+    def printList(self):
+        current = self.head
+        while current:
+            print(current.data, end=' --> ')
+            current = current.next
+        print('None')
+    def delete(self,val):
+        if self.head is None:
+            return "empty"
+        current=self.head
+        while current.next:
+            if current.next==val:
+                break
+            current=current.next
+        if current.next==None:
+            print("not exist")
+        else:
+            current.next=current.next.next
