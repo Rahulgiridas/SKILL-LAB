@@ -1,0 +1,8 @@
+def atm():
+    print("Welcome to Baroda Bank")
+    pins = {"Gokul":7890,"Prem":5643,"Anjan":2341}
+    bal = {"Gokul":7890000,"Prem":5643000,"Anjan":234100}
+    name = input("Enter your name:")
+    pin = input("Enter your pin:")
+    if pins[name] != pin:
+        return "invalid pin"
